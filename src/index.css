@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .duration-high {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 40s linear infinite;
+}
+/* Cambia el color de la barra de desplazamiento a naranja */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color de fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a71d1d; /* Color de la barra de desplazamiento */
+  border-radius: 6px;
+}
+
+/* Para navegadores Firefox */
+/* También puedes agregar otras propiedades para ajustar el aspecto de la barra de desplazamiento en Firefox */
+* {
+  scrollbar-color: #921212 #f0f0f0; /* Color de la barra de desplazamiento y del fondo */
+  scrollbar-width: thin; /* Grosor de la barra de desplazamiento */
+}
