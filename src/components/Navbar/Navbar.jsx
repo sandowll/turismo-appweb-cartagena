@@ -29,7 +29,7 @@ const Navbar = () => {
           <div>
             <a href="#" className="flex items-center font-bold text-3xl sm:text-4xl gap-2">
               <img src={logo} alt="Logo" className="w-12" />
-              TraveCart
+              Trave
             </a>
           </div>
           <div className="flex items-center gap-6">

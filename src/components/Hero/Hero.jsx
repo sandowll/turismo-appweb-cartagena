@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './hero.css';
-import img1 from '../../assets/slider/img1.jpg'; // Importa la imagen 
-import img2 from '../../assets/slider/img2.jpg'; // Importa la imagen 
-import img3 from '../../assets/slider/img3.jpg'; // Importa la imagen 
-import img4 from '../../assets/slider/img4.jpg'; // Importa la imagen 
-import img5 from '../../assets/slider/img5.jpg'; // Importa la imagen 
+import img1 from '../../assets/slider/img1.jpg';
+import img2 from '../../assets/slider/img2.jpg';
+import img3 from '../../assets/slider/img3.jpg';
+import img4 from '../../assets/slider/img4.jpg';
+import img5 from '../../assets/slider/img5.jpg';
+
 
 const Hero = () => {
     const [items, setItems] = useState([
