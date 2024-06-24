@@ -1,7 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from "./components/Hero/Hero.jsx";
-import Navbar from "./components/Navbar/Navbar";
-import Services from "./components/Services/Services.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Dóndeir from "./components/Services/doneir.jsx";
+import Quehacer from "./components/Services/quehacer.jsx";
+import Informacionpráctica from "./components/Services/informacionpractica.jsx";
 import Banner from "./components/Banner/Banner.jsx";
 import AppStore from "./components/AppStore/AppStore.jsx";
 import Testimonial from "./components/Testimonial/Testimonial.jsx";
@@ -21,17 +24,26 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar />
-      <Hero />
-      <div style={{ height: "700px" }}></div>
-      <Services />
-      <Banner />
-      {/* <CoverBanner /> */}
-      <AppStore />
-      <Testimonial />
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+        <Navbar />
+        <Routes>
+          <Route path="/dóndeir" element={<Dóndeir />} />
+          <Route path="/quehacer" element={<Quehacer />} />
+          <Route path="/informacionpráctica" element={<Informacionpráctica />} />
+          <Route path="/" element={
+            <>
+              <Hero />
+              <div style={{ height: "700px" }}></div>
+              <Banner />
+              <AppStore />
+              <Testimonial />
+              <Footer />
+            </>
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
